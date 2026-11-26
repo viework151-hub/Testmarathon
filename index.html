@@ -516,7 +516,7 @@ function startHost(){
   nsP.then(function(ns){
     if(!G)return;
     var note=function(t){$('hNote').textContent=t;$('hNote').hidden=false};
-    if(!ns){note('Live connection is not available in this view, so students cannot join. You can still preview the questions.');return}
+    if(!ns){note('Players must complete the English Marathon as quickly as possible. The player who finishes first with the most correct answers will be awarded 2 bonus points! ');return}
     ns.join('g'+G.code).then(function(r){
       if(!G){try{r.leave()}catch(e){}return}
       G.r=r;
